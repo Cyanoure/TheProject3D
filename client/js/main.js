@@ -2,6 +2,7 @@ function preload(arrayOfImages,callback,callback2){
     var loaded = 0;
     $(arrayOfImages).each(function(){
         var image = $("<img/>")[0];
+        callback2(loaded,arrayOfImages.length);
         image.onload = function(){
             loaded++;
             callback2(loaded,arrayOfImages.length);
